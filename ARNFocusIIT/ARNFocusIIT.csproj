@@ -236,6 +236,8 @@
     <Content Include="pic\370x280-img-3%402x_Old.jpg" />
     <Content Include="pic\370x280-img-3.jpg" />
     <Content Include="pic\370x280-img-3_old.jpg" />
+    <Content Include="pic\370x280-img-4%402x.jpg" />
+    <Content Include="pic\370x280-img-4.jpg" />
     <Content Include="pic\570x380-img-1%402x.jpg" />
     <Content Include="pic\570x380-img-1.jpg" />
     <Content Include="pic\570x380-img-2%402x.jpg" />
@@ -260,6 +262,8 @@
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="fi\flaticon.ttf" />
     <Content Include="fi\flaticon.woff" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <None Include="Properties\PublishProfiles\FocusIIT.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
