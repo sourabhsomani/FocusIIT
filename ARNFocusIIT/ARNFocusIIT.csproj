@@ -253,6 +253,8 @@
     <Content Include="pic\83x83-img-2.jpg" />
     <Content Include="pic\94x94-img-1%402x.jpg" />
     <Content Include="pic\94x94-img-1.jpg" />
+    <Content Include="pic\Building.png" />
+    <Content Include="pic\Building2X.png" />
     <Content Include="pic\H340-img-1%402x.jpg" />
     <Content Include="pic\H340-img-1.jpg" />
     <Content Include="pic\H340-img-2%402x.jpg" />
