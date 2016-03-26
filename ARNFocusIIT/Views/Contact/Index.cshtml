@@ -1,4 +1,4 @@
-﻿
+﻿@model ARNFocusIIT.Models.Mail
 @{
     ViewBag.Title = "Contact";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -70,59 +70,97 @@
                                             <div class="message"></div>
                                         </div>
                                         <div class="email_server_responce"></div>
-                                        <form action="php/contacts-process.php" method="post" class="contact-form alt clear-fix">
-                                            <input type="text" name="name" value="" size="40" placeholder="Your Name" aria-invalid="false" aria-required="true">
-                                            <input type="text" name="email" value="" size="40" placeholder="Your Email" aria-required="true">
-                                            <input type="text" name="subject" value="" size="40" placeholder="Subject" aria-invalid="false" aria-required="true">
-                                            <textarea name="message" cols="40" rows="3" placeholder="Your Message" aria-invalid="false" aria-required="true"></textarea>
-                                            <input type="submit" value="Send" class="cws-button border-radius alt">
-                                        </form>
-                                        <!--/contact-form -->
-                                    </div>
-                                </section>
-                            </div>
-                            <div class="grid-col grid-col-4 widget-address">
-                                <section>
-                                    <h2>Our Offices</h2>
-                                    <address>
-                                        <p>Donec sollicitudin lacus in felis luctus blandit. Ut hendrerit mattis justo at suscipit. Etiam id faucibus augue, sit amet ultricies nisi.</p>
-                                        <p><strong class="fs-18">Address:</strong><br />Corporation Bank Building, Meera Nagar, <br />Chittorgarh, India 312001</p>
-                                        <p>
-                                            <strong class="fs-18">Phone number:</strong><br />
-                                            <a href="tel:305-333552">(305)333-5522</a><br />
-                                            <a href="tel:305-333552">(305)333-5522</a>
-                                        </p>
-                                        <p>
-                                            <strong class="fs-18">E-mail:</strong><br />
-                                            <a href="mailto:uni@domain.com">uni@domain.com</a><br />
-                                            <a href="mailto:uni@domain.com">sales@your-site.com</a>
-                                        </p>
-                                    </address>
-                                </section>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- / contact form section -->
-                </div>
-                <!-- / page content -->
-                <!-- / main content -->
-            </div>
-            <div class="grid-col grid-col-3 sidebar">
-                <aside>
-                    <h2>Like as On Facebook...</h2>
-                    <div class="fb-page" data-href="https://www.facebook.com/arnfocusiit/" data-tabs="timeline" data-height="1000" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/arnfocusiit/"><a href="https://www.facebook.com/arnfocusiit/">ARN FOCUS IIT</a></blockquote></div></div>
-                </aside>
-                <!-- / course finder -->
-                <!-- widget follow -->
-                <aside class="widget-subscribe">
-                    <h2>Follow &amp; Subscribe</h2>
-                    <hr class="divider-big margin-bottom">
-                    <div><a href="#" class="fa fa-twitter"></a><a href="" class="fa fa-skype"></a><a href="" class="fa fa-google-plus"></a><a href="" class="fa fa-rss"></a><a href="" class="fa fa-youtube"></a></div>
-                </aside>
-                <!-- / widget follow -->
-            </div>
-        </div>
-    </div>
+                                        @*<form action="php/contacts-process.php" method="post" class="contact-form alt clear-fix">
+                                                <input type="text" name="name" value="" size="40" placeholder="Your Name" aria-invalid="false" aria-required="true">
+                                                <input type="text" name="email" value="" size="40" placeholder="Your Email" aria-required="true">
+                                                <input type="text" name="subject" value="" size="40" placeholder="Subject" aria-invalid="false" aria-required="true">
+                                                <textarea name="message" cols="40" rows="3" placeholder="Your Message" aria-invalid="false" aria-required="true"></textarea>
+                                                <input type="submit" value="Send" class="cws-button border-radius alt">
+                                            </form>*@
+                                        <fieldset>
+                                            <@using (Html.BeginForm()) {
+                                               @Html.ValidationSummary()
+                                                <div class="form-group">
+                                                    @Html.LabelFor(m => m.Name, new { @class = "col-md-2 control-label" })
+                                                    <div class="col-md-10">
+                                                        @Html.TextBoxFor(m => m.Name, new { @class = "form-control" })
+                                                        @Html.ValidationMessageFor(m => m.Name)
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    @Html.LabelFor(m => m.Email, new { @class = "col-md-2 control-label" })
+                                                    <div class="col-md-10">
+                                                        @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
+                                                        @Html.ValidationMessageFor(m => m.Email)
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    @Html.LabelFor(m => m.Subject, new { @class = "col-md-2 control-label" })
+                                                    <div class="col-md-10">
+                                                        @Html.TextBoxFor(m => m.Subject, new { @class = "form-control" })
+                                                        @Html.ValidationMessageFor(m => m.Subject)
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    @Html.LabelFor(m => m.Message, new { @class = "col-md-2 control-label" })
+                                                    <div class="col-md-10">
+                                                        @Html.TextBoxFor(m => m.Message, new { @class = "form-control" })
+                                                        @Html.ValidationMessageFor(m => m.Message)
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <div class="col-md-offset-2 col-md-10">
+                                                        <input type="submit" class="cws-button border-radius alt" value="Send" />
+                                                    </div>
+                                                </div>
+                                             }
+</fieldset>
+<!--/contact-form -->
+</div>
+</section>
+</div>
+<div class="grid-col grid-col-4 widget-address">
+    <section>
+        <h2>Our Offices</h2>
+        <address>
+            <p>Donec sollicitudin lacus in felis luctus blandit. Ut hendrerit mattis justo at suscipit. Etiam id faucibus augue, sit amet ultricies nisi.</p>
+            <p><strong class="fs-18">Address:</strong><br />Corporation Bank Building, Meera Nagar, <br />Chittorgarh, India 312001</p>
+            <p>
+                <strong class="fs-18">Phone number:</strong><br />
+                <a href="tel:305-333552">(305)333-5522</a><br />
+                <a href="tel:305-333552">(305)333-5522</a>
+            </p>
+            <p>
+                <strong class="fs-18">E-mail:</strong><br />
+                <a href="mailto:uni@domain.com">uni@domain.com</a><br />
+                <a href="mailto:uni@domain.com">sales@your-site.com</a>
+            </p>
+        </address>
+    </section>
+</div>
+</div>
+</div>
+<!-- / contact form section -->
+</div>
+<!-- / page content -->
+<!-- / main content -->
+</div>
+<div class="grid-col grid-col-3 sidebar">
+    <aside>
+        <h2>Like as On Facebook...</h2>
+        <div class="fb-page" data-href="https://www.facebook.com/arnfocusiit/" data-tabs="timeline" data-height="1000" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/arnfocusiit/"><a href="https://www.facebook.com/arnfocusiit/">ARN FOCUS IIT</a></blockquote></div></div>
+    </aside>
+    <!-- / course finder -->
+    <!-- widget follow -->
+    <aside class="widget-subscribe">
+        <h2>Follow &amp; Subscribe</h2>
+        <hr class="divider-big margin-bottom">
+        <div><a href="#" class="fa fa-twitter"></a><a href="" class="fa fa-skype"></a><a href="" class="fa fa-google-plus"></a><a href="" class="fa fa-rss"></a><a href="" class="fa fa-youtube"></a></div>
+    </aside>
+    <!-- / widget follow -->
+</div>
+</div>
+</div>
 </div>
 <br />
 
