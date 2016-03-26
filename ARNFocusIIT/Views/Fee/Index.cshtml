@@ -3,7 +3,26 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+<style>
+    table {
+        font-size: 16px;
+    }  
+    th {
+        font-size: 20px;
+        font-weight: bold;
+        vertical-align:central;
+    }
+    .table-bordered thead > tr > th, .table-bordered tbody > tr > th, .table-bordered tfoot > tr > th, .table-bordered thead > tr > td, .table-bordered tbody > tr > td, .table-bordered tfoot > tr > td {
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+    .table-hover > tbody > tr:hover > td, .table-hover > tbody > tr:hover > th {
+        background:#000;
+        color:#fff;
+    }
+</style>
 <!-- page title -->
+@section Header{
 <div class="page-title">
     <div class="grid-row">
         <h1>Fee Structure</h1>
@@ -16,22 +35,22 @@
         <!-- / bread crumb -->
     </div>
 </div>
+}
 <!-- / page title -->
 <!--Table-->
 <div class="container">
-    <h3>Fee Structure</h3>
     <div class="table-responsive">
         <table class="table table-bordered table-hover">
-            <thead class="alert-info">
+            <thead class="alert-danger">
                 <tr>
-                    <td rowspan="2">Course</td>
-                    <td rowspan="2">Course Fee (Rs)</td>
-                    <td colspan="2">Installments</td>
-                    <td rowspan="2">Single Installment</td>
+                    <th rowspan="2" class="text-center">Course</th>
+                    <th rowspan="2" class="text-center">Course Fee (Rs)</th>
+                    <th colspan="3" class="text-center">Installments</th>
+                    <th rowspan="2" class="text-center">Single Installment</th>
                 </tr>
                 <tr>
-                    <td>1st</td>
-                    <td>2nd</td>
+                    <th class ="text-center">1st</th>
+                    <th class="text-center" colspan="2">2nd</th>
                 </tr>
             </thead>
             <tbody>
@@ -39,60 +58,67 @@
                     <td>UDAAN-VIII</td>
                     <td>16200</td>
                     <td>10000</td>
-                    <td>6200</td>
+                    <td colspan="2">6200</td>
                     <td>15400</td>
                 </tr>
                 <tr>
                     <td>UDAAN-IX</td>
                     <td>20200</td>
                     <td>12000</td>
-                    <td>8200</td>
+                    <td colspan="2">8200</td>
                     <td>19200</td>
                 </tr>
                 <tr>
                     <td>UDAAN-X</td>
                     <td>24700</td>
                     <td>14700</td>
-                    <td>10000</td>
+                    <td colspan="2">10000</td>
                     <td>23500</td>
                 </tr>
                 <tr>
                     <td>LAKSHYA-XI</td>
                     <td>45000</td>
                     <td>27000</td>
-                    <td>18000</td>
+                    <td colspan="2">18000</td>
                     <td>43000</td>
                 </tr>
                 <tr>
                     <td>LAKSHYA-XII</td>
                     <td>50500</td>
                     <td>30500</td>
-                    <td>20000</td>
+                    <td colspan="2">20000</td>
                     <td>48000</td>
                 </tr>
                 <tr>
                     <td>LAKSHYA-XI & XII</td>
                     <td>85000</td>
                     <td>36000</td>
-                    <td>25000 | 24000</td>
+                    <td>25000</td>
+                    <td>24000</td>
                     <td>80000</td>
                 </tr>
                 <tr>
                     <td>PRAYATNA-XI(NCERT 7500*3)</td>
                     <td>21000</td>
                     <td>13000</td>
-                    <td>8000</td>
+                    <td colspan="2">8000</td>
                     <td>20000</td>
                 </tr>
                 <tr>
                     <td>PRAYATNA-XII(NCERT 8000*3)</td>
                     <td>22000</td>
                     <td>14000</td>
-                    <td>8000</td>
+                    <td colspan="2">8000</td>
                     <td>21000</td>
                 </tr>
             </tbody>
         </table>
+        <hr />
+        <h1 class="text-center">Note</h1>
+        <ul class="check-list">
+            <li>Scholerships to School Toppers</li>
+            <li>Scholerships to Enterance Test Topper</li>
+        </ul>
     </div>  
 </div>
 <br />

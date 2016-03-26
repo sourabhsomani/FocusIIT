@@ -18,6 +18,16 @@
     <!--styles -->
 </head>
 <body>
+    <div id="fb-root"></div>
+    <script>
+(function (d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5&appId=1560273300912558";
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
     <!-- page header -->
     <header class="only-color">
         <!-- header top panel -->
@@ -172,10 +182,10 @@
                                 <!-- / sub menu -->
                             </li>
                             <li>
-                                <a href="#">About</a>
+                                <a href="~/about">About</a>
                                 <!-- sub menu -->
                                 <ul>
-                                    <li><a href="#">Introduction</a></li>
+                                    <li><a href="~/about/Introduction">Introduction</a></li>
                                     <li><a href="#">Vision</a></li>
                                     <li><a href="#">Mission</a></li>
                                     <li><a href="#">Gallery</a></li>
@@ -234,7 +244,7 @@
                                             <li><a href="blog-fullwidth.html">Full Width</a></li>
                                             <li><a href="blog-post.html">Blog Post</a></li>
                                         </ul>
-                                        <img src="~/pic/250x150-img-4.jpg" alt>
+                                        <img src="~/pic/250x150-img-4.jpg" alt="">
                                     </li>
                                 </ul>
                                 <!-- / sub mega menu -->
@@ -245,7 +255,7 @@
                                 <!-- sub menu -->
                                 <ul>
                                     <li><a href="#">Admission</a></li>
-                                    <li><a href="#">Fee Structure</a></li>
+                                    <li><a href="~/Fee">Fee Structure</a></li>
                                     <li><a href="#">Courses</a></li>
                                     <li><a href="#">Notifications</a></li>
                                 </ul>
@@ -269,6 +279,7 @@
             </div>
         </div>
         <!-- sticky menu -->
+        @RenderSection("Header", required: false)
     </header>
     <!-- / page header -->
     <!-- revolution slider -->
