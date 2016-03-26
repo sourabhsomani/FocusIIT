@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNet.Identity.EntityFramework;
+﻿using ARNFocusIIT.Entity;
+using Microsoft.AspNet.Identity.EntityFramework;
+using System.Data.Entity;
 
 namespace ARNFocusIIT.Models
 {
@@ -13,5 +15,8 @@ namespace ARNFocusIIT.Models
             : base("DefaultConnection")
         {
         }
+        public virtual DbSet<Classes> Classes { get; set; }
+        public virtual DbSet<Course> Courses { get; set; }
+        public virtual DbSet<CoursesForClass> CoursesForClass { get; set; }
     }
 }

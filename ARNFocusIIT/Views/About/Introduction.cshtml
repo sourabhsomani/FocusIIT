@@ -1,0 +1,223 @@
+﻿
+@{
+    ViewBag.Title = "Introduction";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+    table {
+        font-size: 16px;
+    }
+
+    th {
+        font-size: 20px;
+        font-weight: bold;
+        vertical-align: central;
+    }
+
+    .table-bordered thead > tr > th, .table-bordered tbody > tr > th, .table-bordered tfoot > tr > th, .table-bordered thead > tr > td, .table-bordered tbody > tr > td, .table-bordered tfoot > tr > td {
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+
+    .table-hover > tbody > tr:hover > td, .table-hover > tbody > tr:hover > th {
+        background: #000;
+        color: #fff;
+    }
+</style>
+<!-- page title -->
+@section Header{
+    <div class="page-title">
+        <div class="grid-row">
+            <h1>About ARN Focus IIT</h1>
+            <!-- bread crumb -->
+            <nav class="bread-crumb">
+                <a href="#">About</a>
+                <i class="fa fa-long-arrow-right"></i>
+                <a href="">Introduction</a>
+            </nav>
+            <!-- / bread crumb -->
+        </div>
+    </div>
+}
+<!-- / page title -->
+<!--Table-->
+<div class="container">
+    <div class="page-content container clear-fix">
+
+        <div class="grid-col-row">
+
+            <div class="grid-col grid-col-9">
+                <!-- main content -->
+                <main>
+                    <section class="clear-fix">
+                        <h2>What we do</h2>
+                        <p class="fs-18"><strong>Donec vitae sapien ut libero venenatis faucibus. </strong></p>
+                        <img src="pic/260x290-img-2.jpg" data-at2x="pic/260x290-img-2@2x.jpg" class="border-img img-float-left" alt="">
+                        <p>Maecenas accumsan, massa nec vulputate congue, dolor erat ullamcorper dolor, ac aliquam eros sem in dui. In eu sagittis metus. Proin consectetur suscipit dui sed euismod. Nam non metus in est vehicula vestibulum.<br><br>Mauris scelerisque lectus at diam pretium, eget fringilla erat sollicitudin.Pellentesque quis pharetra tellus. Donec interdum nisi at sem ornare.</p>
+                        <div class="block-overflow">
+                            <ul class="check-list">
+                                <li>Aliquam justo lorem, commodo eget tristique</li>
+                                <li>Curabitur vehicula leo accumsan, varius tellus </li>
+                                <li>Pellentesque imperdiet, leo ut pulvinar facilisis</li>
+                                <li>Сonvallis lectus, vitae condimentum nulla odio</li>
+                            </ul>
+                        </div>
+                    </section>
+                    <hr class="divider-color">
+                    <!-- quote -->
+                    <section>
+                        <div class="quote-avatar-author clear-fix"><img src="pic/60x60-img-2.jpg" data-at2x="pic/60x60-img-2@2x.jpg" alt=""><div class="author-info">Jessica Doe<br><span>Writer</span></div></div>
+                        <q>
+                            <b>Vestibulum et metus a tellus sagittis</b><br>
+                            Praesent sagittis magna nec neque viverra lobortis. Quisque tincidunt tortor ac nisl elementum, a congue dui vestibulum Sed nisl nisl, faucibus non eros ac, posuere pulvinar sem. Quisque volutpat tortor nec malesuada ullamcorper donec a elit non elit vehicula fermentum.
+                        </q>
+                    </section>
+                    <!-- / quote -->
+                    <hr class="divider-color">
+                    <section>
+                        <!-- carousel -->
+                        <div class="widget-popular carousel-container">
+                            <div class="title-carousel">
+                                <h2>Our Featured Courses</h2>
+                                <!-- carousel navigation -->
+                                <div class="carousel-nav">
+                                    <div class="carousel-button">
+                                        <div class="prev"><i class="fa fa-angle-left"></i></div>
+                                        <!--
+                                        -->
+                                        <div class="next"><i class="fa fa-angle-right"></i></div>
+                                    </div>
+                                </div>
+                                <!-- / carousel navigation -->
+                            </div>
+                            <!-- carousel items -->
+                            <div class="grid-col-row">
+                                <div class="owl-carousel owl-three-item owl-theme" style="opacity: 1; display: block;">
+                                    <div class="owl-wrapper-outer">
+                                        <div class="owl-wrapper" style="width: 3000px; left: 0px; display: block;">
+                                            <div class="owl-item" style="width: 300px;">
+                                                <div class="gallery-item course-item">
+                                                    <div class="popular-item">
+                                                        <div class="course-hover">
+                                                            <img src="pic/270x200-img-1.jpg" data-at2x="pic/270x200-img-1@2x.jpg" alt="">
+                                                            <div class="hover-bg bg-color-3"></div>
+                                                            <a href="">Learn More</a>
+                                                        </div>
+                                                        <div class="course-name clear-fix">
+                                                            <span class="price">$75</span>
+                                                            <h3><a href="#">Science In The New Era</a></h3>
+                                                        </div>
+                                                        <div class="course-date  bg-color-3 clear-fix">
+                                                            <div class="day"><i class="fa fa-calendar"></i>09 January</div><div class="time"><i class="fa fa-clock-o"></i>At 9:00 pm</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div><div class="owl-item" style="width: 300px;">
+                                                <div class="gallery-item course-item">
+                                                    <div class="popular-item">
+                                                        <div class="course-hover">
+                                                            <img src="pic/270x200-img-2.jpg" data-at2x="pic/270x200-img-2@2x.jpg" alt="">
+                                                            <div class="hover-bg bg-color-1"></div>
+                                                            <a href="">Learn More</a>
+                                                        </div>
+                                                        <div class="course-name clear-fix">
+                                                            <span class="price">$105</span>
+                                                            <h3><a href="#">Design Practice</a></h3>
+                                                        </div>
+                                                        <div class="course-date bg-color-1 clear-fix">
+                                                            <div class="day"><i class="fa fa-calendar"></i>11 January</div><div class="time"><i class="fa fa-clock-o"></i>At 11:00 pm</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div><div class="owl-item" style="width: 300px;">
+                                                <div class="gallery-item course-item">
+                                                    <div class="popular-item">
+                                                        <div class="course-hover">
+                                                            <img src="pic/270x200-img-2.jpg" data-at2x="pic/270x200-img-2@2x.jpg" alt="">
+                                                            <div class="hover-bg bg-color-3"></div>
+                                                            <a href="">Learn More</a>
+                                                        </div>
+                                                        <div class="course-name clear-fix">
+                                                            <span class="price">$45</span>
+                                                            <h3><a href="#">Design Practice</a></h3>
+                                                        </div>
+                                                        <div class="course-date bg-color-2 clear-fix">
+                                                            <div class="day"><i class="fa fa-calendar"></i>22 January</div><div class="time"><i class="fa fa-clock-o"></i>At 8:00 pm</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div><div class="owl-item" style="width: 300px;">
+                                                <div class="gallery-item course-item">
+                                                    <div class="popular-item">
+                                                        <div class="course-hover">
+                                                            <img src="pic/270x200-img-4.jpg" data-at2x="pic/270x200-img-4@2x.jpg" alt="">
+                                                            <div class="hover-bg bg-color-4"></div>
+                                                            <a href="">Learn More</a>
+                                                        </div>
+                                                        <div class="course-name clear-fix">
+                                                            <span class="price">$45</span>
+                                                            <h3><a href="#">Science In The New Era</a></h3>
+                                                        </div>
+                                                        <div class="course-date bg-color-4 clear-fix">
+                                                            <div class="day"><i class="fa fa-calendar"></i>25 January</div><div class="time"><i class="fa fa-clock-o"></i>At 7:00 pm</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div><div class="owl-item" style="width: 300px;">
+                                                <div class="gallery-item course-item">
+                                                    <div class="popular-item">
+                                                        <div class="course-hover">
+                                                            <img src="pic/270x200-img-5.jpg" data-at2x="pic/270x200-img-5@2x.jpg" alt="">
+                                                            <div class="hover-bg bg-color-3"></div>
+                                                            <a href="">Learn More</a>
+                                                        </div>
+                                                        <div class="course-name clear-fix">
+                                                            <span class="price">$45</span>
+                                                            <h3><a href="#">Design Practice</a></h3>
+                                                        </div>
+                                                        <div class="course-date bg-color-3 clear-fix">
+                                                            <div class="day"><i class="fa fa-calendar"></i>27 January</div><div class="time"><i class="fa fa-clock-o"></i>At 8:00 pm</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+
+                                </div>
+                            </div>
+                            <!-- / carousel items -->
+                        </div>
+                        <!-- / carousel -->
+                    </section>
+                </main>
+                <!-- / main content -->
+            </div>
+            <div class="grid-col grid-col-3 sidebar">
+                <aside>
+                    <h2>Like as On Facebook...</h2>
+                    <div class="fb-page" data-href="https://www.facebook.com/arnfocusiit/" data-tabs="timeline" data-height="1000" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/arnfocusiit/"><a href="https://www.facebook.com/arnfocusiit/">ARN FOCUS IIT</a></blockquote></div></div>
+                </aside>
+                <!-- / course finder -->
+                <!-- widget follow -->
+                <aside class="widget-subscribe">
+                    <h2>Follow &amp; Subscribe</h2>
+                    <hr class="divider-big margin-bottom">
+                    <div><a href="#" class="fa fa-twitter"></a><a href="" class="fa fa-skype"></a><a href="" class="fa fa-google-plus"></a><a href="" class="fa fa-rss"></a><a href="" class="fa fa-youtube"></a></div>
+                </aside>
+                <!-- / widget follow -->
+            </div>
+        </div>
+    </div>
+    <p>The ARN Focus IIT has been established by 3 IITians Late Anand Rathi, Rajesh Dad, Nikhil Punglia in 2014.</p>
+    <p>ARN Focus IIT is situated at Meera Nagar, Chittorgarh (Rajasthan). The only institute in radius of 180 km, with highly experienced and qualified faculties mostly IITians and NITians. It is about 165 kms. north of Jaipur. The institute can be reached either by rail or by road. The nearest railway stations are Narnaul (3 kms.) and Chirawa (1 kms.)</p>
+    <p>The Institute has 6000 square feet in the center of city. The serenity of the hill locks all around endow the campus with an ideal environment for education.</p>
+    <p>ARN Focus IIT was inaugurated to impart quality education of world class standards, reflecting the latest advances in the field of education and research with state-of-the-art academic and administrative infrastructure. The institute has a well-stocked and furnished library, wide open spaces, A/C classroom.</p>
+    <p>ARN Focus IIT offers world-class infrastructure, highly qualified and dedicated faculties and excellent environment for academic and intellectual growth.</p>
+    <p>The institute focuses on comprehensive growth of the students, working on their hearts and minds by addressing to their academic, cultural, physical and social needs in an environment of continuous interaction and growth, conducive for the enrichment of mind and body. The faculty is fully committed to impart quality education by investing all its skills and knowledge. The institute endeavours not only to produce excellent academic results but also to produce excellent and successful professionals.</p>
+    <p>Special emphasis is laid on communication skills and personality development. The uniqueness of our curriculum and various programmes, lies in promoting a strong passion in the students - for all round excellence with perfection; for meeting the challenges head on with due emphasis on ethical and moral values through broad -based management skills. The institute produces knowledgeable young citizens capable of creating a better and prosperous India through inter-cultural understanding and respect.</p>
+</div>
+<br />
