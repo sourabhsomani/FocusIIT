@@ -160,6 +160,7 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AboutController.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\ContactController.cs" />
     <Compile Include="Controllers\FeeController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Entity\Classes.cs" />
@@ -170,6 +171,7 @@
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\Mail.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -318,6 +320,7 @@
     <Content Include="Views\Shared\_Layout - Copy.cshtml" />
     <Content Include="Views\Fee\Index.cshtml" />
     <Content Include="Views\About\Introduction.cshtml" />
+    <Content Include="Views\Contact\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
