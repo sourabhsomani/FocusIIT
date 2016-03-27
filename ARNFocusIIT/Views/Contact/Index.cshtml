@@ -3,27 +3,6 @@
     ViewBag.Title = "Contact";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<style>
-    table {
-        font-size: 16px;
-    }
-
-    th {
-        font-size: 20px;
-        font-weight: bold;
-        vertical-align: central;
-    }
-
-    .table-bordered thead > tr > th, .table-bordered tbody > tr > th, .table-bordered tfoot > tr > th, .table-bordered thead > tr > td, .table-bordered tbody > tr > td, .table-bordered tfoot > tr > td {
-        padding-top: 15px;
-        padding-bottom: 15px;
-    }
-
-    .table-hover > tbody > tr:hover > td, .table-hover > tbody > tr:hover > th {
-        background: #000;
-        color: #fff;
-    }
-</style>
 <!-- page title -->
 @section Header{
     <div class="page-title">
@@ -78,7 +57,7 @@
                                                 <input type="submit" value="Send" class="cws-button border-radius alt">
                                             </form>*@
                                         <fieldset>
-                                            <@using (Html.BeginForm()) {
+                                            @using (Html.BeginForm()) {
                                                @Html.ValidationSummary()
                                                 <div class="form-group">
                                                     @Html.LabelFor(m => m.Name, new { @class = "col-md-2 control-label" })
@@ -104,7 +83,8 @@
                                                 <div class="form-group">
                                                     @Html.LabelFor(m => m.Message, new { @class = "col-md-2 control-label" })
                                                     <div class="col-md-10">
-                                                        @Html.TextBoxFor(m => m.Message, new { @class = "form-control" })
+                                                        <textarea rows="5" cols="50" name="Message"></textarea>
+                                                        @*@Html.TextBoxFor(m => m.Message, new { @class = "form-control" })*@
                                                         @Html.ValidationMessageFor(m => m.Message)
                                                     </div>
                                                 </div>
@@ -113,6 +93,7 @@
                                                         <input type="submit" class="cws-button border-radius alt" value="Send" />
                                                     </div>
                                                 </div>
+                                                <h2>@ViewBag.Error</h2>
                                              }
 </fieldset>
 <!--/contact-form -->

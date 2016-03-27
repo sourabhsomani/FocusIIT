@@ -14,7 +14,7 @@ namespace ARNFocusIIT.Controllers
         // GET: /Contact/
         public ActionResult Index()
         {
-            return View();
+            return View(new ARNFocusIIT.Models.Mail());
             //return RedirectToAction("EmailSend");
         }
         [HttpPost]
@@ -22,22 +22,28 @@ namespace ARNFocusIIT.Controllers
         {
             if (ModelState.IsValid)
             {
-                MailMessage mail = new MailMessage();
-                mail.To.Add(objMail.Name);
-                mail.From = new MailAddress(objMail.Email);
-                mail.Subject = objMail.Subject;
-                string Body = objMail.Message;
-                mail.Body = Body;
-                mail.IsBodyHtml = true;
-                SmtpClient smtp = new SmtpClient();
-                smtp.Host = "smtp.gmail.com";
-                smtp.Port = 587;
-                smtp.UseDefaultCredentials = false;
-                smtp.Credentials = new System.Net.NetworkCredential
-                ("username", "password");
-                smtp.EnableSsl = true;
-                smtp.Send(mail);
-                return View("Index", objMail);
+                MailMessage message = new MailMessage();
+                SmtpClient smtpClient = new SmtpClient();
+                string msg = string.Empty;
+                try
+                {
+                    MailMessage m = new MailMessage();
+                    m.From = new MailAddress("info@focusiit.com");
+                    m.To.Add("focusiit2014@gmail.com");
+                    m.Body = @"<h1>Subject : " + objMail.Subject + "</h1><h3>My Name is:" + objMail.Name + "</h3> <h3>My Email:" + objMail.Email + "</h3><p><strong>Message:</strong>" + objMail.Message + "</p></div>";
+                    m.Subject =objMail.Subject;
+                    m.IsBodyHtml = true;
+                    SmtpClient smtp = new SmtpClient("relay-hosting.secureserver.net");
+                    smtp.UseDefaultCredentials = true;
+                    smtp.Send(m);
+
+                    ViewBag.Error = "Your email successfully sent.";
+                }
+                catch (Exception ex)
+                {
+                    ViewBag.Error = ex.Message;
+                }
+                return View();
             }
             else
             {

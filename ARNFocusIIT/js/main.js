@@ -415,8 +415,8 @@ function initialize() {
     },{
     }
   ]
-  var coordLat = 40.766928;
-  var coordLng = -73.506390;
+    var coordLat = 24.8904651;
+    var coordLng = 74.6255848;
   var delta
   if( jQuery(window).width() < 756 )
   {
@@ -425,7 +425,7 @@ function initialize() {
   var point = new google.maps.LatLng(coordLat,coordLng);
   var center = new google.maps.LatLng(coordLat,coordLng);  
   var mapOptions = {  
-    zoom: 12,
+    zoom: 16,
     center: center,
     scrollwheel: false,
     mapTypeId: google.maps.MapTypeId.ROADMAP
