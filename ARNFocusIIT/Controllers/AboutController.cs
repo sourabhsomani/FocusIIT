@@ -18,5 +18,9 @@ namespace ARNFocusIIT.Controllers
         {
             return View();
         }
+        public ActionResult VissionMission()
+        {
+            return View();
+        }
 	}
 }
